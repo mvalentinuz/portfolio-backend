@@ -1,4 +1,0 @@
-FROM amazoncorretto:11
-MAINTAINER maurovalentinuz
-COPY /out/artifacts/portfoliobackend_jar/portfoliobackend.jar portfoliobackend.jar
-ENTRYPOINT ["java", "-jar", "/portfoliobackend.jar"]
