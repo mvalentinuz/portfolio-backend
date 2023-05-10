@@ -1,7 +1,12 @@
 package com.portfoliobackend.controller;
 
 import com.portfoliobackend.model.*;
-import com.portfoliobackend.service.*;
+import com.portfoliobackend.service.IEducacionService;
+import com.portfoliobackend.service.IExperienciaService;
+import com.portfoliobackend.service.IInformacionPersonalService;
+import com.portfoliobackend.service.IProyectoService;
+import com.portfoliobackend.service.ISkillService;
+import com.portfoliobackend.service.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -92,9 +97,9 @@ public class Controller {
     public void borrarInfoPersonal(@PathVariable Long id){
         infoService.borrarInfoPersonal(id);
     }
-    @PutMapping("/edit/infopersonal")
+    @PatchMapping("/edit/infopersonal")
     public void editarInfoPersonal(@RequestBody InformacionPersonal info){
-
+    infoService.editarInfoPersonal(info);
     }
 
     @PostMapping("/new/experiencia")

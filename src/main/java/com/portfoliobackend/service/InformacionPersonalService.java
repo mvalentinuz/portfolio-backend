@@ -31,4 +31,46 @@ public class InformacionPersonalService implements IInformacionPersonalService{
     public InformacionPersonal buscarInfoPersonal(Long id) {
         return infoPersRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void editarInfoPersonal(InformacionPersonal nuevaInfo) {
+    InformacionPersonal infoActual = buscarInfoPersonal(nuevaInfo.getId());
+    if(infoActual!=null)
+         {
+             if (nuevaInfo.getApellido()!=null)
+             {
+                 infoActual.setApellido(nuevaInfo.getApellido());
+             }
+             if (nuevaInfo.getNombre()!=null)
+             {
+                 infoActual.setNombre(nuevaInfo.getNombre());
+             }
+             if (nuevaInfo.getProfesion()!=null)
+             {
+                 infoActual.setProfesion(nuevaInfo.getProfesion());
+             }
+             if (nuevaInfo.getCorreo()!=null)
+             {
+                 infoActual.setCorreo(nuevaInfo.getCorreo());
+             }
+             if (nuevaInfo.getDescripcion()!=null)
+             {
+                 infoActual.setDescripcion(nuevaInfo.getDescripcion());
+             }
+             if (nuevaInfo.getUrlFotoDePerfil()!=null)
+             {
+                 infoActual.setUrlFotoDePerfil(nuevaInfo.getUrlFotoDePerfil());
+             }
+             if (nuevaInfo.getUrlBanner()!=null)
+             {
+                 infoActual.setUrlBanner(nuevaInfo.getUrlBanner());
+             }
+             if (nuevaInfo.getUrlInstagram()!=null)
+             {
+                 infoActual.setUrlInstagram(nuevaInfo.getUrlInstagram());
+             }
+
+             infoPersRepository.save(infoActual);
+         }
+    }
 }

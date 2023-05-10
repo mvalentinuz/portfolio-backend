@@ -10,5 +10,6 @@ public interface IInformacionPersonalService {
     public void crearInfoPersonal(InformacionPersonal info);
     public void borrarInfoPersonal(Long id);
     public InformacionPersonal buscarInfoPersonal(Long id);
+    public void editarInfoPersonal(InformacionPersonal nuevaInfo);
 
 }
