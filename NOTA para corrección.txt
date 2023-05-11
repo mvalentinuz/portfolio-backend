@@ -1,0 +1,5 @@
+Estimado docente, 
+
+	No adjunté el link del deploy del backend debido a errores de las alternativas de Koyeb y Render que me impidieron realizar este paso. Desafortunadamente, no fui capaz de resolver este problema por mi cuenta. Realizo la entrega del resto del contenido con la esperanza de que se valore el desarrollo de los aspectos conceptuales en el código, considerando que el proceso de deploy en estas alternativas en específico no representa de forma estricta una puesta a prueba del gran porcentaje del conocimiento adquirido durante el cursado.
+
+	Mis más sinceras disculpas por los inconvenientes.
